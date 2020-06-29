@@ -1,10 +1,1 @@
-{
-  "development": {
-    "apiUrl": "https://cms.tmwt.org",
-    "contentApiKey": "e4c03819b5dc6d9c6084adbf76"
-  },
-  "production": {
-    "apiUrl": "https://cms.tmwt.org",
-    "contentApiKey": "e4c03819b5dc6d9c6084adbf76"
-  }
-}
+{}
