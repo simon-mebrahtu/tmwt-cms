@@ -1,10 +1,10 @@
 {
   "development": {
-    "apiUrl": "https://gatsby.ghost.io",
-    "contentApiKey": "9cc5c67c358edfdd81455149d0"
+    "apiUrl": "https://cms.tmwt.org",
+    "contentApiKey": "e4c03819b5dc6d9c6084adbf76"
   },
   "production": {
-    "apiUrl": "https://gatsby.ghost.io",
-    "contentApiKey": "9cc5c67c358edfdd81455149d0"
+    "apiUrl": "https://cms.tmwt.org",
+    "contentApiKey": "e4c03819b5dc6d9c6084adbf76"
   }
 }
