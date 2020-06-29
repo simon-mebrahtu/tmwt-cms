@@ -6,19 +6,21 @@ const generateRSSFeed = require(`./src/utils/rss/generate-feed`)
 let ghostConfig
 
 try {
-    ghostConfig = require(`./.ghost`)
+	ghostConfig = require(`./.ghost`)
 } catch (e) {
-    ghostConfig = {
-        production: {
-            apiUrl: process.env.GHOST_API_URL,
-            contentApiKey: process.env.GHOST_CONTENT_API_KEY,
-        },
-    }
+	console.log(`No .ghost config found`);
 } finally {
+    ghostConfig = {
+	    production: {
+		    apiUrl: process.env.GHOST_API_URL, 
+		    contentApiKey: process.env.GHOST_CONTENT_API_KEY,
+	    },
+    }
+
     const { apiUrl, contentApiKey } = process.env.NODE_ENV === `development` ? ghostConfig.development : ghostConfig.production
 
     if (!apiUrl || !contentApiKey || contentApiKey.match(/<key>/)) {
-        throw new Error(`GHOST_API_URL and GHOST_CONTENT_API_KEY are required to build. Check the README.`) // eslint-disable-line
+	    throw new Error(`GHOST_API_URL and GHOST_CONTENT_API_KEY are required to build. Check the README.`) // eslint-disable-line
     }
 }
 
